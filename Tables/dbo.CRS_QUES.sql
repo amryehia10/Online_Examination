@@ -1,0 +1,12 @@
+CREATE TABLE [dbo].[CRS_QUES]
+(
+[Course_ID] [int] NOT NULL,
+[QuestionID] [int] NOT NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[CRS_QUES] ADD CONSTRAINT [PK_CRS_QUES] PRIMARY KEY CLUSTERED ([Course_ID], [QuestionID]) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[CRS_QUES] ADD CONSTRAINT [FK_CRS_QUES_Course] FOREIGN KEY ([Course_ID]) REFERENCES [dbo].[Course] ([Course_ID])
+GO
+ALTER TABLE [dbo].[CRS_QUES] ADD CONSTRAINT [FK_CRS_QUES_Questions] FOREIGN KEY ([QuestionID]) REFERENCES [dbo].[Questions] ([QuestionID])
+GO

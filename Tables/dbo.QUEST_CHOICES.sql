@@ -1,0 +1,11 @@
+CREATE TABLE [dbo].[QUEST_CHOICES]
+(
+[Letter] [nchar] (10) COLLATE Latin1_General_CI_AS NOT NULL,
+[Sentence] [varchar] (500) COLLATE Latin1_General_CI_AS NOT NULL,
+[QuestionID] [int] NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[QUEST_CHOICES] ADD CONSTRAINT [PK_QUEST_CHOICES] PRIMARY KEY CLUSTERED ([Letter], [Sentence]) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[QUEST_CHOICES] ADD CONSTRAINT [FK_QUEST_CHOICES_Questions] FOREIGN KEY ([QuestionID]) REFERENCES [dbo].[Questions] ([QuestionID])
+GO
