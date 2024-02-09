@@ -17,11 +17,27 @@ create   proc [dbo].[SP_InsertStudent]
 		begin
 			RAISERROR('One or more parameters are NULL', 16, 1);
 			return;
+		END
+
+        if exists(select Phone_Number from Student where Phone_Number=@Pnumber)
+		begin
+			RAISERROR('Duplicate Phone Number', 16, 1);
+			RETURN;
 		end
-			if not exists(select Phone_Number from Student where Phone_Number=@Pnumber) and (@gender in ('male', 'female'))
-				insert into student(Std_FirstName, Std_LastName, Address, Gender, Birth_Date, Phone_Number, Dept_ID)
-				values(@FName, @LName, @address, @gender, @Bdate, @Pnumber, @deptID)
-			else
-				RAISERROR('Duplicate Phone Number or wrong gender', 16, 1);
+		IF (@gender NOT IN ('male', 'female'))
+		begin
+			RAISERROR('Wrong gender', 16, 1);
+			RETURN;
+		end
+		
+		IF NOT EXISTS(SELECT Dept_ID FROM dbo.Department WHERE Dept_ID = @deptID)
+		begin
+			RAISERROR('Department ID Not found', 16, 1);
+			RETURN;
+		END
+        
+		insert into student(Std_FirstName, Std_LastName, Address, Gender, Birth_Date, Phone_Number, Dept_ID)
+		values(@FName, @LName, @address, @gender, @Bdate, @Pnumber, @deptID)
+		
 	end
 GO

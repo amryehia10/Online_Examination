@@ -65,21 +65,21 @@
   </WriteToFileOptions>
   <DataFileSet>
     <Count>16</Count>
-    <DataFile>dbo.Student_Data.sql</DataFile>
-    <DataFile>dbo.STD_QUES_EXAM_Data.sql</DataFile>
-    <DataFile>dbo.STD_INS_Data.sql</DataFile>
-    <DataFile>dbo.STD_CRS_Data.sql</DataFile>
+    <DataFile>dbo.Course_Data.sql</DataFile>
+    <DataFile>dbo.CRS_QUES_Data.sql</DataFile>
+    <DataFile>dbo.Department_Data.sql</DataFile>
+    <DataFile>dbo.DEPT_CRS_Data.sql</DataFile>
+    <DataFile>dbo.Exam_Data.sql</DataFile>
     <DataFile>dbo.Instructor_Data.sql</DataFile>
     <DataFile>dbo.INS_CRS_Data.sql</DataFile>
-    <DataFile>dbo.DEPT_CRS_Data.sql</DataFile>
-    <DataFile>dbo.Department_Data.sql</DataFile>
-    <DataFile>dbo.QUEST_MODELANSWER_Data.sql</DataFile>
-    <DataFile>dbo.QUEST_CHOICES_Data.sql</DataFile>
-    <DataFile>dbo.CRS_QUES_Data.sql</DataFile>
-    <DataFile>dbo.Topic_Data.sql</DataFile>
     <DataFile>dbo.Questions_Data.sql</DataFile>
-    <DataFile>dbo.Exam_Data.sql</DataFile>
+    <DataFile>dbo.QUEST_CHOICES_Data.sql</DataFile>
+    <DataFile>dbo.QUEST_MODELANSWER_Data.sql</DataFile>
     <DataFile>dbo.QUES_TYPE_Data.sql</DataFile>
-    <DataFile>dbo.Course_Data.sql</DataFile>
+    <DataFile>dbo.STD_CRS_Data.sql</DataFile>
+    <DataFile>dbo.STD_INS_Data.sql</DataFile>
+    <DataFile>dbo.STD_QUES_EXAM_Data.sql</DataFile>
+    <DataFile>dbo.Student_Data.sql</DataFile>
+    <DataFile>dbo.Topic_Data.sql</DataFile>
   </DataFileSet>
 </DatabaseInformation>

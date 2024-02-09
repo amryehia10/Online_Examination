@@ -9,10 +9,10 @@ create   proc [dbo].[SP_InsertQuestModelAnswer] @QuestionID int, @modelAnswer nc
 		begin
 			RAISERROR('ID not found', 16, 1);
 			return;
-		end
-		if  exists(select @modelAnswer where @modelAnswer in('a', 'b','c','d'))
+		END
+        IF NOT EXISTS(SELECT letter FROM dbo.QUEST_CHOICES WHERE letter = @modelAnswer AND QuestionID = @QuestionID)
 		begin
-			RAISERROR('Model answer must be a or b or c or d', 16, 1);
+			RAISERROR('Model answer isnot found in the choices', 16, 1);
 			return;
 		end
 		insert into Quest_MODELANSWER(ModelAnswer, QuestionID)

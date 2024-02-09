@@ -1,0 +1,5 @@
+INSERT INTO [dbo].[QUEST_MODELANSWER] ([ModelAnswer], [QuestionID]) VALUES (N'a         ', 2)
+INSERT INTO [dbo].[QUEST_MODELANSWER] ([ModelAnswer], [QuestionID]) VALUES (N'b         ', 1)
+INSERT INTO [dbo].[QUEST_MODELANSWER] ([ModelAnswer], [QuestionID]) VALUES (N'b         ', 2)
+INSERT INTO [dbo].[QUEST_MODELANSWER] ([ModelAnswer], [QuestionID]) VALUES (N'b         ', 4)
+INSERT INTO [dbo].[QUEST_MODELANSWER] ([ModelAnswer], [QuestionID]) VALUES (N'c         ', 2)
